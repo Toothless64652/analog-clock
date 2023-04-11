@@ -1,0 +1,261 @@
+/* ========= GOOGLE FONTS ========= */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* ======= MAIN CSS ======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+}
+
+body {
+    background: #25252d;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ========== CLOCK FACE =========== */
+.analog {
+    background: #2d2f41;
+    position: relative;
+    width: 460px;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 5px 25px rgba(14, 21, 37, 0.8);
+}
+
+.analog::before {
+    z-index: 0;
+    content: "Tooth";
+    position: absolute;
+    color: #c0c0f6;
+    font-size: 6.5em;
+    font-weight: 700;
+    opacity: 0.4;
+}
+
+.analog::after {
+    z-index: 0;
+    content: "Analog Clock";
+    position: absolute;
+    color: #c0c0f6;
+    font-size: 1.5em;
+    font-weight: 700;
+    transform: translate(105px, 50px);
+}
+
+
+/* ========= CLOCK HOURS NUMBER ============= */
+.hour-cont {
+    width: 460px;
+}
+
+.hour-no {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hour-no li {
+    position: absolute;
+    height: 100%;
+    top: 0;
+}
+
+.hour-no .num {
+    color: #c0c0f6;
+    font-size: 1.6em;
+    font-weight: 400;
+    margin: 19px;
+}
+
+.hour-no li:nth-child(1) {
+    transform: rotate(90deg);
+}
+
+.hour-no li:nth-child(1) .num {
+    transform: rotate(270deg);
+}
+
+.hour-no li:nth-child(2) {
+    transform: rotate(180deg);
+}
+
+.hour-no li:nth-child(3) {
+    transform: rotate(270deg);
+}
+.hour-no li:nth-child(3) .num {
+    transform: rotate(90deg);
+}
+
+.hour-no li:nth-child(2) .num {
+    transform: rotate(180deg);
+}
+
+
+/* ====== CLOCK HOUR MARKS & MIDDLE LINES ====== */
+.hour-sign {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hour-sign .sign {
+    background: #c0c0f6;
+    width: 1px;
+    height: 19px;
+    margin-top: 19px;
+}
+
+.hour-sign li {
+    position: absolute;
+    height: 100%;
+    top: 0;
+}
+
+.hour-sign li:nth-child(1) {
+    transform: rotate(30deg);
+}
+
+.hour-sign li:nth-child(2) {
+    transform: rotate(60deg);
+}
+
+.hour-sign li:nth-child(3) {
+    transform: rotate(120deg);
+}
+
+.hour-sign li:nth-child(4) {
+    transform: rotate(150deg);
+}
+
+.hour-sign li:nth-child(5) {
+    transform: rotate(210deg);
+}
+
+.hour-sign li:nth-child(6) {
+    transform: rotate(240deg);
+}
+
+.hour-sign li:nth-child(7) {
+    transform: rotate(300deg);
+}
+
+.hour-sign li:nth-child(8) {
+    transform: rotate(330deg);
+}
+
+
+
+/* ========== CLOCK MIDDLE LINES ============ */
+.hour-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hour-line .line {
+    background: #c0c0f6;
+    width: 1px;
+    height: 140px;
+    opacity: 0.2;
+    margin-top: 55px;
+}
+
+.hour-line li {
+    position: absolute;
+    height: 100%;
+    top: 0;
+}
+
+
+.hour-line li:nth-child(1) {
+    transform: rotate(90deg);
+}
+
+.hour-line li:nth-child(2) {
+    transform: rotate(180deg);
+}
+
+.hour-line li:nth-child(3) {
+    transform: rotate(270deg);
+}
+
+
+/* ========= CLOCK HANDS ========== */
+.c-hand {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hand {
+    z-index: 8;
+    position: absolute;
+}
+
+.hr-hand {
+    width: 12px;
+    height: 280px;
+}
+
+.hr-hand::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 140px;
+    background: linear-gradient(180deg, #634dff, #5fd4ff);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(14, 21, 37, 0.5);
+}
+
+.min-hand {
+    width: 8px;
+    height: 320px;
+}
+
+.min-hand::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 160px;
+    background: linear-gradient(180deg, #ff5e9a, #ffb960);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(14, 21, 37, 0.5);
+}
+
+.sec-hand {
+    width: 5px;
+    height: 335px;
+}
+
+.sec-hand::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(180deg, #08b843, #79f1d1);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(14, 21, 37, 0.5);
+}
+
+
+
+/* ========= CLOCK CENTER DOT =========== */
+.center-dot {
+    z-index: 9;
+    position: absolute;
+    background: #c0c0f6;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 7px double #2d2f41;
+}
